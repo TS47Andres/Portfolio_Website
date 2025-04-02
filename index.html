@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Antique&display=swap"
+        rel="stylesheet">
+    <title>Personal Portfolio #09 | AsmrProg</title>
+
+
+
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section'); // Select all sections
+
+            sections.forEach(section => {
+                const items = section.children; // Get all child elements of the section
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // When the section comes into view, add the 'show' class
+                            Array.from(items).forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('show');
+                                }, index * 300); // Delay each item by 300ms
+                            });
+                        } else {
+                            // When the section goes out of view, remove the 'show' class
+                            Array.from(items).forEach(item => {
+                                item.classList.remove('show');
+                            });
+                        }
+                    });
+                });
+
+                observer.observe(section); // Observe each section
+            });
+        });
+
+        function updateTime() {
+            // Get the current time in New Delhi (GMT+5:30)
+            const options = {
+                timeZone: 'Asia/Kolkata',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric',
+                hour12: true
+            };
+
+            const currentTime = new Date().toLocaleString('en-IN', options);
+            document.getElementById('time').innerText = `${currentTime}`;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display time immediately 
+        updateTime();
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <img class="navbar__logo" src="./assets/Logo.1.JPG">
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check">
+
+        <div class="navbar__menu">
+            <a href="#home" class="navbar__link">Home</a>
+            <a href="#projects" class="navbar__link">Projects</a>
+            <a href="#techstack" class="navbar__link">Tech Stack</a>
+            <a href="#skills" class="navbar__link">Skills</a>
+            <a href="#about" class="navbar__link">About</a>
+
+        </div>
+
+        <div class="navbar__actions">
+            <div class="navbar__location">
+                <h5>India, New Delhi</h5>
+                <p id="time">6:18:31 pm</p>
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="home" class="hero">
+
+        <div class="hero__intro">
+            <p class="subtitle">HELLO</p>
+            <h1 class="title">I'm <span>Akshat Sharma</span><br>a Software Developer</h1>
+            <h3>New Delhi, India</h3>
+            <p>Welcome to my software developer portfolio! I'm Akshat Sharma a software developer and your problem
+                solver in the digital world. </p>
+            <div class="hero__actions">
+                <button class="btn" onclick="window.open('https://wa.me/+917682001264','_blank')">Send Message</button>
+                <button class="btn btn--secondary" onclick="window.open('assets/myResume.pdf')">See My Resume</button>
+            </div>
+        </div>
+
+        <div class="hero__content">
+            <img src="assets/profile.jpg" alt="Profile Image" class="hero__image">
+        </div>
+
+        <div class="hero__socials">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="http://www.linkedin.com/in/akshat-sharma-a12247188" target="_blank"><i
+                    class="ri-linkedin-box-line"></i></a>
+            <a href="https://wa.me/+917682001264" target="_blank"><i class="ri-whatsapp-line"></i></a>
+            <a href="https://leetcode.com/u/TS47Andres/" target="_blank"><img src="assets/leetcode.png"></img></a>
+        </div>
+
+
+    </section>
+    <hr>
+
+    <section id="skills" class="skills">
+
+        <div class="skills__desc">
+            <h3>Experienced Across Multiple Projects and Technologies</h3>
+            <p>Bringing creativity and technical proficiency to building responsive web applications, automations and
+                enhancing user
+                experiences.</p>
+
+            <div class="skills__actions">
+                <button class="btn" onclick="window.open('https://wa.me/+917682001264','_blank')">Send Message</button>
+                <button class="btn btn--secondary"
+                    onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=akshatpcid12@gmail.com', '_blank')">Send
+                    Email</button>
+            </div>
+        </div>
+
+        <div class="skills__pictures">
+            <img class="skills__icons" src="assets/Python.png">
+            <div class="skill__info">
+                <h5>10000+</h5>
+                <p>Lines of Code</p>
+            </div>
+            <img class="skills__icons" src="./assets/React.png">
+            <div class="skill__info">
+                <h5>60000+</h5>
+                <p>Lines of Code</p>
+            </div>
+            <div class="skill__info">
+                <h5>20000+</h5>
+                <p>Lines of Code</p>
+            </div>
+            <img class="skills__icons" src="./assets/JavaScript.png">
+            <div class="skill__info">
+                <h5>10000+</h5>
+                <p>Lines of Code</p>
+            </div>
+            <img class="skills__icons" src="./assets/C++ (CPlusPlus).png">
+        </div>
+
+
+
+    </section>
+
+    <section id="techstack" class="skills">
+
+        <div class="skills__techstack">
+            <h3>Wide Range of Tech Stack</h3>
+            <p>Crafting innovative solutions with a diverse tech stack—turning complex challenges into seamless digital
+                experiences.</p>
+            <div class="skills__actions">
+                <button class="btn" onclick="window.open('https://wa.me/+917682001264','_blank')">Send Message</button>
+                <button class="btn btn--secondary"
+                    onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=akshatpcid12@gmail.com', '_blank')">Send
+                    Email</button>
+            </div>
+        </div>
+
+        <div class="skills__stats">
+            <img class="icon__img" src="./assets/HTML5.png">
+            <img class="icon__img" src="./assets/CSS3.png">
+            <img class="icon__img" src="./assets/JavaScript.png ">
+            <img class="icon__img" src="./assets/C.png">
+            <img class="icon__img" src="./assets/C++ (CPlusPlus).png">
+            <img class="icon__img" src="./assets/Python.png">
+            <img class="icon__img" src="./assets/Node.js.png">
+            <img class="icon__img" src="./assets/Express.png">
+            <img class="icon__img" src="./assets/React.png">
+            <img class="icon__img" src="./assets/MySQL.png">
+            <img class="icon__img" src="./assets/MongoDB.png">
+            <img class="icon__img" src="./assets/PostgresSQL.png">
+            <img class="icon__img" src="./assets/Git.png">
+            <img class="icon__img" src="./assets/GitHub.png">
+        </div>
+
+    </section>
+    <hr>
+
+
+
+    <section id="projects" class="showcase">
+
+        <div class="showcase__header">
+            <h3>I Can Help You With:</h3>
+        </div>
+
+        <div class="showcase_categories">
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <i class="ri-macbook-line"></i>
+                        <h4>Python Automation</h4>
+                    </div>
+                    <div class="category__desc">
+                        <p>Seamless automation of repetitive tasks using Python, enhancing efficiency and reducing
+                            manual effort.</p>
+
+                    </div>
+                </div>
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Automation 1" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Automation 1</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Automation 2" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Automation 2</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Automation 3" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Automation 4</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Automation 4" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Automation 4</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <i class="ri-macbook-line"></i>
+                        <h4>C++ Softwares</h4>
+                    </div>
+                    <div class="category__desc">
+                        <p>High-performance execution of complex algorithms using C++, ensuring speed, efficiency, and
+                            optimal resource management.</p>
+
+                    </div>
+                </div>
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/matrix_driver.png" alt="Software 1" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Matrix Driver Class</h5>
+                            <p>June 2024</p>
+                        </div>
+                        <p class="project-card__desc">A C++ template class for matrix operations with constructors for
+                            dimension initialization and value assignment, operator overloading for arithmetic
+                            operations, and methods for transposition and symmetry checks.</p>
+                        <button class="btn"
+                            onclick="window.open('https://github.com/TS47Andres/Project-Matrix', '_blank')">View GitHub
+                            Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/login_check.png" alt="Software 2" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Login Check</h5>
+                            <p>June 2025</p>
+                        </div>
+                        <p class="project-card__desc">A C++ program that manages user accounts with encrypted passwords
+                            using a substitution cipher, allowing adding, deleting, and displaying user details. It
+                            features password masking for security and a menu-driven interface for easy interaction.</p>
+                        <button class="btn"
+                            onclick="window.open('https://github.com/TS47Andres/login_check_C-', '_blank')">View GitHub
+                            Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Software 3" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Student Management System</h5>
+                            <p>July 2025</p>
+                        </div>
+                        <p class="project-card__desc">A C++ based school management software that securely manages
+                            student, teacher, and classroom data with password-protected access and an intuitive
+                            interface for efficient administration.</p>
+                        <button class="btn" onclick="window.open('https://github.com/TS47Andres/Project-School')">View
+                            GitHub Repo</button>
+
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <i class="ri-group-2-line"></i>
+                        <h4>Website Development</h4>
+                    </div>
+                    <div class="category__desc">
+                        <p>End-to-end development of responsive websites that look great on all devices, with a focus on
+                            performance and aesthetics.</p>
+
+                    </div>
+                </div>
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Website 1" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Website 1</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Website 2" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Website 2</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Website 3" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Website 3</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                    <div class="project-card">
+                        <img src="assets/coming_soon.jpg" alt="Website 4" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Website 4</h5>
+                            <p>February 2025</p>
+                        </div>
+                        <p class="project-card__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Sit autem soluta consequatur, sequi
+                            et sint laudantium non rem veritatis.</p>
+                        <button class="btn">View GitHub Repo</button>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+        </div>
+
+    </section>
+
+    <section id="about" class="career">
+        <div class="career__jobs">
+            <h3>Work Experience</h3>
+            <div class="job">
+                <i class="ri-smartphone-fill"></i>
+                <div class="job__info">
+                    <h5>App Development Intern at <span>Maharaja Agrasen College</span></h5>
+                    <p>February 2025 - Present</p>
+                </div>
+            </div>
+            <div class="job">
+                <i class="ri-line-chart-fill"></i>
+                <div class="job__info">
+                    <h5>Data Analytics Intern (Winter) at <span>CSRBOX</span></h5>
+                    <p>December 2024 – January 2025</p>
+                </div>
+            </div>
+            <div class="job">
+                <i class="ri-line-chart-fill"></i>
+                <div class="job__info">
+                    <h5>Data Analytics Intern (Summer) at <span>CSRBOX</span></h5>
+                    <p>June 2024 – August 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="career__certificates">
+            <h3>Licences and Certifications</h3>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>The Ultimate MySQL Bootcamp: Go From SQL Beginner to Expert,<span> Udemy</span></h5>
+                        <p>February 2025</p>
+                    </div>
+                </div>
+                <a href="https://www.udemy.com/certificate/UC-0b854b0b-f10a-4b2e-88de-bf4c3d988aa5/" target="_blank"><i
+                        class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>Data Visualization With Python,<span> IBM</span></h5>
+                        <p>January 2025</p>
+                    </div>
+                </div>
+                <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/c493958289a241ac9bbdf1431cdda2ae"
+                    target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>CS105: Introduction to Python,<span> Saylor Academy</span></h5>
+                        <p>Novemeber 2024</p>
+                    </div>
+                </div>
+                <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1731999400/6470403965AS.pdf"
+                    target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>C Programming For Beginners - Master the C Language,<span> Udemy</span></h5>
+                        <p>July 2024</p>
+                    </div>
+                </div>
+                <a href="https://www.udemy.com/certificate/UC-7d44f0f7-6a43-4e99-b7ac-40d4e1bebe21/" target="_blank"><i
+                        class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>Data Analysis With Python,<span> IBM</span></h5>
+                        <p>July 2024</p>
+                    </div>
+                </div>
+                <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/ec6272606a144718b93f5f3ecdf9f2b4"
+                    target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>Python 101 for Data Science,<span> IBM</span></h5>
+                        <p>July 2024</p>
+                    </div>
+                </div>
+                <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/09d139dfc0074eeb82ae52d7b259cb0c"
+                    target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>Beginning C++ Programming - From Beginner To Beyond,<span> Udemy</span></h5>
+                        <p>May 2024</p>
+                    </div>
+                </div>
+                <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-e36a2ac5-ed81-4f87-8521-9eaeab604f94.pdf"
+                    target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+            <div class="certificate">
+                <div>
+                    <i class="ri-medal-fill"></i>
+                    <div class="certificate__info">
+                        <h5>CS107: C++ Programming,<span> Saylor Academy</span></h5>
+                        <p>March 2024</p>
+                    </div>
+                </div>
+                <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1709914466/8873182585AS.pdf"
+                    target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact">
+        <h5 style="font-size: 60px;">Contact Me</h5>
+        <button class="btn" onclick="window.open('https://wa.me/+917682001264','_blank')">Send Message</button>
+        <button class="btn"
+            onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=akshatpcid12@gmail.com', '_blank')">Send
+            Email</button>
+        <p>Phone: <span>+91 7682001264</span></p>
+        <p>Email: <span>akshatpcid12@gmail.com</span></p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__brand">
+            <img class="footer__logo" src="./assets/Logo.1.JPG">
+            <p>© 2025 Akshat Sharma.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
